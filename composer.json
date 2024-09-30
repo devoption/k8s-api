@@ -1,0 +1,47 @@
+{
+    "name": "devoptn/k8s-api",
+    "description": "Kubernetes API Client",
+    "keywords": [
+        "kubernetes",
+        "api",
+        "client",
+        "k8s",
+        "devoption",
+        "devoptn",
+        "laravel"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/devoption/k8s-api/issues",
+        "source": "https://github.com/devoption/k8s-api"
+    },
+    "authors": [
+        {
+            "name": "DevOption Engineering",
+            "email": "engineering@devoption.io"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "DevOption\\Kubernetes\\": "src/"
+        }
+    },
+    "require": {
+        "illuminate/support": "^11.25"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DevOption\\Kubernetes\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "DevOption\\Kubernetes\\Providers\\KubernetesAPIServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
