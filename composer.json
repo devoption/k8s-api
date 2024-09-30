@@ -35,16 +35,16 @@
             "DevOption\\Kubernetes\\Tests\\": "tests/"
         }
     },
+    "require-dev": {
+        "laravel/pint": "^1.18"
+    },
     "extra": {
         "laravel": {
             "providers": [
-                "DevOption\\Kubernetes\\Providers\\KubernetesAPIServiceProvider"
+                "DevOption\\Kubernetes\\Providers\\KubernetesServiceProvider"
             ]
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true,
-    "require-dev": {
-        "laravel/pint": "^1.18"
-    }
+    "prefer-stable": true
 }
