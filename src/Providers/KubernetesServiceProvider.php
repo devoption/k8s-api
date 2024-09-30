@@ -13,7 +13,9 @@ class KubernetesServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $this->publishes([
+            __DIR__.'/../../config/k8s.php' => config_path('k8s.php'),
+        ], 'k8s-config');
     }
     
     /**
@@ -23,6 +25,8 @@ class KubernetesServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->mergeConfigFrom(
+            __DIR__.'/../../config/k8s.php', 'k8s'
+        );
     }
 }
