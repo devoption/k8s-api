@@ -4,6 +4,7 @@ namespace DevOption\Kubernetes\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Contracts\Foundation\Application;
+
 class KubernetesServiceProvider extends ServiceProvider
 {
     /**
