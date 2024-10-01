@@ -2,9 +2,8 @@
 
 namespace DevOption\Kubernetes\Providers;
 
-use Illuminate\Support\Facades\Config;
 use Illuminate\Support\ServiceProvider;
-
+use Illuminate\Contracts\Foundation\Application;
 class KubernetesServiceProvider extends ServiceProvider
 {
     /**
@@ -12,10 +11,10 @@ class KubernetesServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(Application $app)
     {
         $this->publishes([
-            __DIR__.'/../../config/k8s.php' => Config::path('k8s.php'),
+            __DIR__.'/../../config/k8s.php' => $app->configPath('k8s.php'),
         ], 'k8s-config');
     }
     

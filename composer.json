@@ -28,7 +28,8 @@
         }
     },
     "require": {
-        "illuminate/support": "^11.25"
+        "illuminate/support": "^11.25",
+        "illuminate/contracts": "^11.25"
     },
     "autoload-dev": {
         "psr-4": {
